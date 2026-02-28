@@ -1,6 +1,6 @@
-# Une capture d'écran d'un ping (avec ansible) aux appareils de prod
-![Capture d'écran d'un ping (avec ansible) aux appareils de prod.](img/ping appareils prod.PNG) 
-**Capture ping appareils prod.**
+# Une capture d'écran d'un ping (avec Ansible) aux appareils de prod
+![Capture ping appareils prod](img/ping appareils prod.PNG)
+**Figure :** Test de connectivité Ansible vers les appareils de production.
 
 # Une capture d'écran de l'installation de Docker
 ![Installation Docker.](img/Installation Docker sur VM.PNG) 
