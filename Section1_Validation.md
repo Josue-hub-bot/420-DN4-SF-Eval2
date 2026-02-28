@@ -18,7 +18,9 @@
 
 ## Une capture d'écran de la copie de vos fichiers vers la machine distante
 
+![Copie des fichiers vers la VM.](img/Copie_fichiers_vers_VM.PNG)
 
+**Capture du ccopie des fichiers vers la VM.**
 
 ## Une capture d'écran du lancement des conteneurs
 
