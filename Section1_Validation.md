@@ -1,6 +1,6 @@
 ## Une capture d'écran d'un ping (avec Ansible) aux appareils de prod
 
-![Capture ping appareils prod](img/ping appareils prod.PNG)
+![Capture ping appareils prod](img/ping_appareils_prod.PNG)
 
 **Figure :** Test de connectivité Ansible vers les appareils de production.
 
