@@ -1,6 +1,6 @@
 ## Une capture d'écran d'un ping (avec Ansible) aux appareils de prod
 
-![Capture ping appareils prod](img/ping_appareils_prod.PNG)
+![Capture ping appareils prod](img/Ping_appareils_prod.PNG)
 
 **CCapture ping appareils prod**
 
@@ -12,25 +12,25 @@
 
 ## Une capture d'écran de la création de répertoires/dossiers
 
-![Création des dossiers sur la VM.](img/Creation des dossiers sur VM.PNG)
+![Création des dossiers sur la VM.](img/Creation_dossiers_sur_VM.PNG)
 
 **Capture du création des dossiers sur la VM.**
 
 ## Une capture d'écran de la copie de vos fichiers vers la machine distante
 
+
+
 ## Une capture d'écran du lancement des conteneurs
 
-![Lancement des conteneurs.](img/Lancement des conteneurs.PNG) 
+![Lancement des conteneurs.](img/Lancement_des_conteneurs.PNG) 
 
 **Capture Lancement des conteneurs.**
 
 ## Une capture d'écran de votre navigateur affichant le site Web avec la connexion à la BD
 
-![Page d'acceuil navigateur.](img/Page d'acceuil.PNG) 
+![Page d'acceuil navigateur.](img/Page_acceuil.PNG) 
 
 **Capture du navigateur.**
 
 ## Une capture d'écran des journaux (logs) de votre serveur Web
 
-
-![Texte alternatif](img/Page_acceuil.PNG)
