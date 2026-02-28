@@ -2,11 +2,11 @@
 
 ![Capture ping appareils prod](img/ping_appareils_prod.PNG)
 
-**Figure :** Test de connectivité Ansible vers les appareils de production.
+**CCapture ping appareils prod**
 
 ## Une capture d'écran de l'installation de Docker
 
-![Installation Docker.](img/Installation Docker sur VM.PNG) 
+![Installation Docker.](img/Installation_Docker_sur_VM.PNG) 
 
 **Capture de l'installation de Docker.**
 
@@ -31,3 +31,6 @@
 **Capture du navigateur.**
 
 ## Une capture d'écran des journaux (logs) de votre serveur Web
+
+
+![Texte alternatif](img/Page_acceuil.PNG)
