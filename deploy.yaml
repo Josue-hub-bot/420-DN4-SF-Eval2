@@ -1,0 +1,154 @@
+---
+- name: Déploiement application Web avec Docker Compose v2
+  hosts: prod
+  become: true
+
+  vars:
+    project_path: "/home/{{ ansible_user }}/webapp"
+
+  tasks:
+
+  #################################################
+  # INSTALLATION DOCKER + COMPOSE V2
+  #################################################
+
+  - name: Installer dépendances système
+    apt:
+      name:
+        - ca-certificates
+        - curl
+        - gnupg
+        - lsb-release
+      state: present
+      update_cache: yes
+    tags: install
+
+  - name: Ajouter clé GPG Docker
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+    tags: install
+
+  - name: Ajouter dépôt Docker
+    apt_repository:
+      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable
+      state: present
+    tags: install
+
+  - name: Installer Docker + Compose plugin
+    apt:
+      name:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-compose-plugin
+      state: present
+      update_cache: yes
+    tags: install
+
+  - name: Activer et démarrer Docker
+    systemd:
+      name: docker
+      state: started
+      enabled: true
+    tags: install
+
+  #################################################
+  # STRUCTURE PROJET
+  #################################################
+
+  - name: Créer dossier projet
+    file:
+      path: "{{ project_path }}"
+      state: directory
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
+      mode: '0755'
+    tags: deploy
+
+  - name: Créer sous-dossiers
+    file:
+      path: "{{ project_path }}/{{ item }}"
+      state: directory
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
+      mode: '0755'
+    loop:
+      - html
+      - nginx
+    tags: deploy
+
+  #################################################
+  # COPIE DES FICHIERS
+  #################################################
+
+  - name: Copier docker-compose.yaml
+    copy:
+      src: ./docker-compose.yaml
+      dest: "{{ project_path }}/docker-compose.yaml"
+    tags: deploy
+
+  - name: Copier Dockerfile
+    copy:
+      src: ./Dockerfile
+      dest: "{{ project_path }}/Dockerfile"
+    tags: deploy
+
+  - name: Copier configuration nginx
+    copy:
+      src: ./nginx/nginx.conf
+      dest: "{{ project_path }}/nginx/nginx.conf"
+    tags: deploy
+
+  - name: Copier application PHP
+    copy:
+      src: ./html/
+      dest: "{{ project_path }}/html/"
+    tags: deploy
+
+  #################################################
+  # LANCEMENT SERVICES
+  #################################################
+
+  - name: Construire et démarrer les conteneurs
+    command: docker compose up -d --build
+    args:
+      chdir: "{{ project_path }}"
+    tags: deploy
+
+  #################################################
+  # VALIDATION
+  #################################################
+
+  - name: Vérifier que le site répond
+    uri:
+      url: http://192.168.1.254   # Remplace par l'IP de ta VM distante
+      status_code: 200
+    register: web_test
+    retries: 10
+    delay: 10
+    until: web_test.status == 200
+    tags: verify
+
+  - name: Afficher état des conteneurs
+    command: docker compose ps
+    args:
+      chdir: "{{ project_path }}"
+    register: containers_status
+    changed_when: false
+    tags: verify
+
+  - name: Afficher statut
+    debug:
+      var: containers_status.stdout_lines
+    tags: verify
+
+  #################################################
+  # STOP SERVICES (TAG)
+  #################################################
+
+  - name: Arrêter les conteneurs
+    command: docker compose down
+    args:
+      chdir: "{{ project_path }}"
+    tags: stop

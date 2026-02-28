@@ -1,0 +1,46 @@
+services:
+  # Service MySQL
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - backend
+
+  # Service PHP-FPM
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-fpm
+    volumes:
+      - ./html:/var/www/html
+    networks:
+      - backend
+
+  # Service Nginx
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    depends_on:
+      - php
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf  # Fichier de config adapté
+      - ./html:/var/www/html
+    ports:
+      - "8080:80"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  mysql-data:
