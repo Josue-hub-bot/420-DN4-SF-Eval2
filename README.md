@@ -1,12 +1,13 @@
 ![Log du cégep de Sainte-Foy](img/logoFC2_couleur.png) 
 
-# 420-DN4-SF  
+# README
 
-| Sécurisation des appareils      |
+| Sécurisation des appareils   420-DN4-SF   |
 | :---                                                  |
-|  Nom du prjet: Déploiement d'un environnement avec Ansible                           |
+| Nom du prjet: Déploiement d'un environnement avec Ansible                           |
 | Date: 28 Février 2026        |
 | Noms des membres: Josué Albert Tamo Fowo       |
+
 
 
 ## Description du projet
