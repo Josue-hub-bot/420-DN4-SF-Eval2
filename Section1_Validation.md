@@ -51,5 +51,9 @@
 
 **Capture du navigateur.**
 
+## 7- Une capture d'écran de votre navigateur affichant le site Web avec la connexion à la BD
 
+![Journaux du serveu Web.](img/Journaux_serveur_Web.PNG) 
+
+**Capture Journaux du serveu Web.**
 
