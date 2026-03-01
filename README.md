@@ -1,5 +1,13 @@
-# Nom du prjet: Déploiement d'un environnement avec Ansible
-# Date: 28 Février 2026 
+![Log du cégep de Sainte-Foy](img/logoFC2_couleur.png) 
+
+# 420-DN4-SF  
+
+| Sécurisation des appareils      |
+| :---                                                  |
+|  Nom du prjet: Déploiement d'un environnement avec Ansible                           |
+| Date: 28 Février 2026        |
+| Noms des membres: Josué Albert Tamo Fowo       |
+
 
 ## Description du projet
 
@@ -11,11 +19,3 @@ Les principaux objectifs du projet incluent :
 - Utilisation de Docker et Docker Compose pour la gestion des conteneurs.
 - Configuration de Nginx pour servir un site web dynamique.
 - Sécurisation de l'accès aux variables sensibles à travers Ansible.
-
-## Noms des membres
-
-- *Josué Albert Tamo Fowo *
-
-## Noms des membres
-
-- *Josué Albert Tamo Fowo *
