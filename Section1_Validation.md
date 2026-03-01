@@ -6,7 +6,7 @@
 | Sécurisation d'un parc informatique -- AEC (LEADN)    |
 | :---                                                  |
 | Sécurisation des appareils 420-DN4-SF                           |
-| Hiver 2026    |
+| Hiver 2026     |
 
 
 
