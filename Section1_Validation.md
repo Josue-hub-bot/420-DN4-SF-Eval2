@@ -62,8 +62,11 @@
 ## Références :
 
 [Déploiement d'Ansible sur le système d'exploitation Ubuntu](https://labex.io/fr/tutorials/ansible-deploying-ansible-on-ubuntu-operating-system-411632)
+
 [Comprendre l’inventaire Ansible](https://linux.goffinet.org/ansible/comprendre-inventaire-ansible/)
+
 [Building a Complete PHP Stack Using Docker and Docker-Compose](https://www.centron.de/en/tutorial/deploy-a-php-app-with-nginx-mysql-docker-compose/)
+
 [A system administrator's guide to getting started with Ansible - FAST!](https://www.redhat.com/en/blog/system-administrators-guide-getting-started-ansible-fast)  
 [Documentation officielle d'Ansible](https://docs.ansible.com)  
 [Documentation ansible pour group_vars](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#organizing-host-and-group-variables)  
