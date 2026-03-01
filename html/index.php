@@ -59,7 +59,7 @@ catch(PDOException $e) {
 <body>
 
     <header>
-        <h1>Bienvenue sur notre application PHP et MySQL</h1>
+        <h1>Page de index.pp</h1>
     </header>
 
     <div class="container">

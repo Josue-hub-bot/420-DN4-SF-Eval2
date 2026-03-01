@@ -14,10 +14,8 @@ Les principaux objectifs du projet incluent :
 
 ## Noms des membres
 
-- *Membre 1* : [Nom du membre 1]
-- *Membre 2* : [Nom du membre 2]
-- *Membre 3* : [Nom du membre 3]
+- *Josué Albert Tamo Fowo *
 
-## Structure du dépôt
+## Noms des membres
 
-Voici la structure du projet :
+- *Josué Albert Tamo Fowo *
