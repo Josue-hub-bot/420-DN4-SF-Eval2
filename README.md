@@ -6,7 +6,8 @@
 | :---                                                  |
 | Nom du prjet: Déploiement d'un environnement avec Ansible                           |
 | Date: 28 Février 2026        |
-| Noms des membres: Josué Albert Tamo Fowo       |
+| Noms des membres: Josué Albert Tamo Fowo  
+Fabrice Bertin Tsafouet Nkenfack     |
 
 
 
